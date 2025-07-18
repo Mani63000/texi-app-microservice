@@ -1,0 +1,55 @@
+{
+  "monorepo": true,
+  "root": "apps",
+  "projects": {
+    "common": {
+      "type": "library",
+      "root": "libs/common",
+      "entryFile": "index",
+      "sourceRoot": "libs/common/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/common/tsconfig.lib.json"
+      }
+    },
+    "payments": {
+      "type": "application",
+      "root": "apps/payments",
+      "entryFile": "main",
+      "sourceRoot": "apps/payments/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/payments/tsconfig.app.json"
+      }
+    },
+    "rides": {
+      "type": "application",
+      "root": "apps/rides",
+      "entryFile": "main",
+      "sourceRoot": "apps/rides/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/rides/tsconfig.app.json"
+      }
+    },
+    "taxi-app": {
+      "type": "application",
+      "root": "apps/taxi",
+      "entryFile": "main",
+      "sourceRoot": "apps/taxi/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/taxi/tsconfig.app.json"
+      }
+    },
+    "api-gateway": {
+      "type": "application",
+      "root": "apps/api-gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/api-gateway",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "tsConfigPath": "tsconfig.build.json",
+    "webpack": true
+  }
+}
